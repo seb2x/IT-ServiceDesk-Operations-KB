@@ -30,3 +30,6 @@ This procedure standardizes the unboxing, OS staging, baseline configuration, an
 2. Open PowerShell as Administrator and join machine to Active Directory domain:
    ```powershell
    Add-Computer -DomainName "corp.domain.local" -OUPath "OU=Workstations,DC=corp,DC=local" -Restart
+3. Upon reboot, force a Group Policy update:
+   ```cmd
+   gpupdate /force
